@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+
+    <title>Bunny Game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="controls">
+        <a href="start_page.html">
+          <button>Back</button>
+        </a>
+        <button onClick="reset()">Reset</button>
+        <audio id="myAudio" src="sound/backgroundmusic.mp3"></audio>
+        <button onClick="playAudio()" id="music">Play music</button>
+        <button onClick="saveCharacter()">Save</button>
+      </div>
+      <div class="character-container">
+        <div class="character">
+          <img src="img/character.svg" alt="character" />
+        </div>
+        <div id="clothes-overlay">
+          <img
+            src="img/shirt.svg"
+            alt="shirt"
+            id="shirt"
+            style="display: none"
+          />
+          <img
+            src="img/pants.svg"
+            alt="pants"
+            id="pants"
+            style="display: none"
+          />
+          <img
+            src="img/shoes.svg"
+            alt="shoes"
+            id="shoes"
+            style="display: none"
+          />
+          <img
+            src="img/glasses.svg"
+            alt="glasses"
+            id="accesories"
+            style="display: none"
+          />
+        </div>
+      </div>
+
+      <div class="clothes-buttons">
+        <button onclick="toggleClothes('shirt')">
+          <img src="img/shirt.svg" alt="shirt" />
+        </button>
+        <button onclick="toggleClothes('pants')">
+          <img src="img/pants.svg" alt="pants" />
+        </button>
+        <button onclick="toggleClothes('shoes')">
+          <img src="img/shoes.svg" alt="shoes" />
+        </button>
+        <button onclick="toggleClothes('accesories')">
+          <img src="img/glasses.svg" alt="glasses" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
