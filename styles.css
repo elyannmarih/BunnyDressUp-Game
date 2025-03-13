@@ -69,7 +69,6 @@ a {
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
 .controls a {
@@ -126,26 +125,24 @@ a {
 }
 
 #accesories {
-  top: 35%;
-  width: 5%;
+  top: 38%;
 }
 #shirt {
-  top: 49%;
-  width: 15%;
+  top: 48%;
+  z-index: 2;
 }
 #pants {
-  top: 70%;
-  width: 10%;
+  top: 65%;
+  z-index: 1;
 }
 #shoes {
-  top: 80%;
-  width: 10%;
+  top: 70%;
+  z-index: 0;
 }
 
 .clothes-buttons {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -161,4 +158,47 @@ a {
 .clothes-buttons button img {
   width: 70px;
   height: 50px;
+}
+
+@media (max-width: 450px), (max-height: 850px) {
+  .game-container {
+    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .controls {
+    gap: 5px;
+  }
+
+  .controls button {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .character-container {
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .character img {
+    max-height: 100%;
+  }
+
+  .clothes-buttons {
+    gap: 10px;
+  }
+
+  .clothes-buttons button {
+    width: 70px;
+    height: 60px;
+  }
+
+  .clothes-buttons button img {
+    width: 50px;
+    height: 35px;
+  }
 }

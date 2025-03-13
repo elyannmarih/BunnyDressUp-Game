@@ -20,7 +20,7 @@ function playAudio() {
     music.innerHTML = "Pause";
   } else {
     audio.pause();
-    music.innerHTML = "Play Music";
+    music.innerHTML = "Music";
   }
 }
 
