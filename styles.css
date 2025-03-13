@@ -2,7 +2,14 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
   background-color: #e6f4ff;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -15,11 +22,14 @@ a {
   font-family: "Pixelify Sans", sans-serif !important;
 }
 
+/***START-PAGE***/
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   background-image: url("/img/background.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,13 +56,13 @@ a {
 
 .game-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   width: 100%;
-  min-height: 100vh;
-  padding: 20px;
-  gap: 10px;
+  overflow: hidden;
+  padding: 50px;
 }
 
 .controls {
@@ -62,6 +72,10 @@ a {
   flex-wrap: wrap;
 }
 
+.controls a {
+  text-decoration: none;
+}
+
 .controls button {
   background-color: #ffd0e9;
   border: none;
@@ -69,29 +83,34 @@ a {
   cursor: pointer;
   padding: 10px;
   color: #ffff;
+  font-size: 25px;
 }
 
 .character-container {
   position: relative;
-  max-width: 100%;
-  max-height: 100%; /* Increased max height */
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  flex-grow: 1; /* Makes it grow inside the flex container */
-}
-
-.character img {
-  object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
+  flex-grow: 1;
+  padding-top: 90px;
 }
 
 .character {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
 }
 
 #clothes-overlay {
@@ -137,7 +156,6 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  width: 100%;
 }
 
 .clothes-buttons button {
