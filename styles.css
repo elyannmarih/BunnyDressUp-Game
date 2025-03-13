@@ -94,8 +94,6 @@ a {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  flex-grow: 1;
-  padding-top: 90px;
 }
 
 .character {
@@ -107,47 +105,40 @@ a {
 }
 
 .character img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.2);
+  object-fit: contain;
 }
 
 #clothes-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #accesories,
 #shirt,
 #pants,
 #shoes {
-  width: 40%;
-  max-width: 120px;
   display: none;
   position: absolute;
 }
 
 #accesories {
-  grid-row: 1;
-  width: 10%;
+  top: 35%;
+  width: 5%;
 }
 #shirt {
-  grid-row: 2;
-  width: 10%;
+  top: 49%;
+  width: 15%;
 }
 #pants {
-  grid-row: 3;
+  top: 70%;
   width: 10%;
 }
 #shoes {
-  grid-row: 4;
+  top: 80%;
   width: 10%;
 }
 
@@ -155,11 +146,11 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 
 .clothes-buttons button {
-  width: 90px;
+  width: 100px;
   height: 90px;
   background-color: #ffd0e9;
   border: none;
