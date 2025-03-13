@@ -27,13 +27,25 @@ function playAudio() {
 function saveCharacter() {
   let characterContainer = document.querySelector(".character-container");
 
-  html2canvas(characterContainer, {
-    backgroundColor: null,
-    scale: 2,
-  }).then((canvas) => {
-    let link = document.createElement("a");
-    link.download = "character.png";
-    link.href = canvas.toDataURL("image/png");
-    link.click();
-  });
+  if (window.innerWidth < 500) {
+    characterContainer.style.width = "100vw";
+    characterContainer.style.height = "100vh";
+  }
+
+  setTimeout(() => {
+    html2canvas(characterContainer, {
+      backgroundColor: null,
+      scale: window.devicePixelRatio,
+    }).then((canvas) => {
+      let link = document.createElement("a");
+      link.download = "character.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+
+      if (window.innerWidth < 500) {
+        characterContainer.style.width = "";
+        characterContainer.style.height = "";
+      }
+    });
+  }, 100);
 }
