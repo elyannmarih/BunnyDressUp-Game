@@ -1,1 +1,1 @@
-<p>🚀 <a href="https://elyannmarih.github.io/BunnyDressingUp-Game/">View Live Demo</a></p>
+<p>🚀 <a href="https://elyannmarih.github.io/BunnyDressUp-Game/">View Live Demo</a></p>
