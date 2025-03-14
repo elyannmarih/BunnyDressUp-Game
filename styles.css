@@ -31,6 +31,7 @@ a {
   align-items: center;
   height: 100%;
   width: 100%;
+  background-image: url("img/background.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
