@@ -15,12 +15,22 @@ function reset() {
 function playAudio() {
   let audio = document.getElementById("myAudio");
   let music = document.getElementById("music");
+
   if (audio.paused) {
     audio.play();
     music.innerHTML = "Pause";
   } else {
     audio.pause();
     music.innerHTML = "Music";
+  }
+}
+
+function popAudio() {
+  let audio = document.getElementById("myAudio");
+  let pop = document.getElementById("pop");
+
+  if (!audio.paused) {
+    pop.play();
   }
 }
 
